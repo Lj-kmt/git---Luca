@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luca</title>
+    <link rel="stylesheet" href="../pages css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+     <hr>
+     <header class="header">
+        <div class="logo"> <h1>Luca</h1>
+        </div>
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="#home"><i class="fas fa-heart"></i> Favorites</a></li>
+                <li><a href="#destinations"><i class="fas fa-globe"></i> Destinations</a></li>
+                <li>
+                    <a href="#about" class="border-menu">Menu</a>
+                    <div class="dropdown">
+                        <a href="../Pages Html/inscrption.html"><i class="fa fa-user"></i> S'inscrire </a>
+                        <a href="../Pages Html/connexion.html"><i class="fa fa-question-circle"></i> Se connecter </a>
+                        <a href="#"><i class="fa fa-sign-out-alt"></i> Se déconnecter </a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Ajoutez le script JavaScript à la fin du corps -->
+    <script src="./pages Js/toggle.js"></script>
+    
+     <hr>
+     <section class="search-section">
+        <h1>Trouvez votre séjour idéal</h1>
+        <form class="search-form">
+            <input type="text" placeholder="Destination">
+            <input type="date" placeholder="Date d'arrivée">
+            <input type="date" placeholder="Date de départ">
+            <button type="submit">Rechercher</button>
+        </form>
+    </section> 
+    
+    <section class="offers">
+        <h2>Offres populaires</h2>
+        
+        <div class="offer-cards">
+            <a href="../Pages Html/hotels.html" class="card card-hotel" style="background-image: url('./pages images/hotel-1831072_1280.jpg');">
+                <div>Hôtels</div>
+            </a>
+            <a href="../Pages Html/Appartements.html" class="card card-marrakech" style="background-image: url('./pages images/the-round-tower-2762438_1280.jpg');">
+                <div>Appartements</div>
+            </a>
+            <a href="../Pages Html/Résidences.html" class="card card-bali" style="background-image: url('./pages images/hotel-1979406_1280.jpg');">
+                <div>Résidences</div>
+            </a>
+            <a href="#" class="card card-bali" style="background-image: url('./pages images/breitenstein-1464756_1280.jpg');">
+                <div>Vente de Terrains</div>
+            </a>
+        </div> 
+        <div class="carousel-container"> 
+            <h1> Nouveautés ! </h1>
+            <div class="carousel">
+                <button class="arrow left" id="prevBtn">&#8592;</button>
+                <div class="carousel-images">
+                    <!-- Images -->
+                    <img src="./pages images/park-4568598_1280.jpg" alt="Image 1">
+                    <img src="./pages images/water-5386820_1280.jpg" alt="Image 2">
+                    <img src="./pages images/e7f27fbf82fcad2ae0c8df7267f2c75a.jpg" alt="Image 3">
+                    <img src="./pages images/chairs-2181947_1280.jpg" alt="Image 4">
+                    <img src="./pages images/bedroom-3475656_1280.jpg" alt="Image 5">
+                    <img src="./pages images/hotel-1979406_1280.jpg" alt="Image 6">
+                    <img src="https://via.placeholder.com/300" alt="Image 7">
+                    <img src="https://via.placeholder.com/300" alt="Image 8">
+                    <img src="https://via.placeholder.com/300" alt="Image 9">
+                    <img src="https://via.placeholder.com/300" alt="Image 10">
+                    <img src="https://via.placeholder.com/300" alt="Image 11">
+                    <img src="https://via.placeholder.com/300" alt="Image 12">
+                </div>
+                <button class="arrow right" id="nextBtn" aria-label="Next Slide">&#8594;</button>
+
+            </div>
+            <div class="carousel-selectors">
+                <!-- Selectors -->
+                <span class="selector" data-index="0"></span>
+                <span class="selector" data-index="1"></span>
+                <span class="selector" data-index="2"></span>
+                <span class="selector" data-index="3"></span>
+            </div>
+        </div>
+        <script src="./pages Js/car1.js"></script>
+
+    </div> 
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Découvrez le meilleur moment pour réserver votre prochain séjour</h1> <br> <br> <br>
+                <div class="city-selector">
+                    <button class="city active">Abidjan</button>
+                    <button class="city">Assinie</button>
+                    <button class="city">Grand-Lahou</button>
+                    <button class="city">Grand-Bereby</button>
+                    <button class="city">Bouaké</button>
+                    <button class="city">Yamoussoukro</button>
+                    <button class="city">San Pedro</button>
+                    <button class="city">Sassandra</button>
+                </div>
+                <div class="price-list"> 
+                    <p class="price-info">Les prix sont basés sur la fourchette de prix moyenne des hôtels 3 étoiles par nuit.</p> <br> <br><br>
+                    <div class="months">
+                        <div class="month">
+                            <p>Decembre</p>
+                            <p>$50 - $320</p>
+                        </div>
+                        <div class="month">
+                            <p>Janvier</p>
+                            <p>$65 - $380</p>
+                        </div>
+                        <div class="month">
+                            <p>Février</p>
+                            <p>$65 - $340</p>
+                        </div>
+                        <div class="month">
+                            <p>Mars</p>
+                            <p>$75 - $345</p>
+                        </div>
+                        <div class="month">
+                            <p>Avril</p>
+                            <p>$80 - $405</p>
+                        </div>
+                        <div class="month">
+                            <p>Mai</p>
+                            <p>$90 - $400</p>
+                        </div>
+                        <div class="month">
+                            <p>Juin</p>
+                            <p>$70 - $285</p>
+                        </div>
+                        <div class="month">
+                            <p> juillet</p>
+                            <p>$80 - $285</p>
+                        </div>
+                        <div class="month">
+                            <p>Août</p>
+                            <p>$25 - $35</p>
+                        </div>
+                        <div class="month">
+                            <p>Septembre</p>
+                            <p>$90 - $125</p>
+                        </div>
+                        <div class="month">
+                            <p>Octobre</p>
+                            <p>$125 - $320</p>
+                        </div>
+                        <div class="month">
+                            <p>Novembre</p>
+                            <p>$80 - $385</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script src="./pages Js/mains.js"></script> 
+    
+    <footer class="footer"> 
+        <div class="footer-container">
+            <!-- Logo and Country Selector -->
+            <div class="footer-top">
+                <div class="footer-logo"> 
+                    <img src="https://via.placeholder.com/100x40" alt="Logo">
+                </div> 
+                <div class="footer-country">
+                    <select aria-label="Country selector"> 
+                        <option value="usa">Côte d'Ivoire</option>
+                        <option value="france">🇫🇷 France</option>
+                        <option value="germany">🇩🇪 Germany</option>
+                        <option value="spain">🇪🇸 Spain</option>
+                    </select>
+                </div>
+            </div>
+
+        
+            <div class="footer-middle">
+                <div class="footer-links">
+                    <div>
+                        <p>Entreprise</p>
+                        <ul>
+                            <li><a href="#">Emplois</a></li>
+                            <li><a href="#">Presse</a></li>
+                            <li><a href="#">Relations avec les investisseurs</a></li>
+                            <li><a href="#">Applications mobiles</a></li>
+                            <li><a href="#">Studio d'affaires trivago</a></li>
+                            <li><a href="#">Filiale</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p>Aide</p>
+                        <ul>
+                            <li><a href="#">Comment fonctionne Luca</a></li>
+                            <li><a href="#">Termes et conditions</a></li>
+                            <li><a href="#">Mentions légales</a></li>
+                            <li><a href="#">Avis de confidentialité</a></li>
+                            <li><a href="#">Cybersécurité</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-newsletter">
+                    <p>
+                        Obtenez une inspiration exclusive pour votre prochain séjour – abonnez-vous à notre newsletter.
+                    </p>
+                    <form>
+                        <input type="email" placeholder="Adresse email" aria-label="Adresse email">
+                        <button type="submit">S'abonner</button>
+                    </form>
+                </div>
+            </div>
+
+            
+            <div class="footer-bottom">
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook">🌐</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                    <a href="#" aria-label="Instagram">📸</a>
+                    <a href="#" aria-label="LinkedIn">🔗</a>
+                    <a href="#" aria-label="YouTube">▶️</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>
+                        Luca , Youpougon, Abidjan Côte d'Ivoire<br>
+                        Copyright 2024 Luca | Tous droits reserves.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,250 @@
+
+   
+   body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+
+.search-bar-container {
+    
+   
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    }
+    
+    /* Barre de recherche */
+    .search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 30px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 30px;
+    margin-right: 10px;
+    }
+    
+    .search-button {
+    background-color: #007bff;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    transition: background-color 0.3s ease;
+    }
+    
+    .search-button:hover {
+     background-color: #0056b3;
+    }
+    
+    .search-icon {
+    font-size: 18px;
+    }
+    
+    /* Responsiveness */
+    @media (max-width: 768px) {
+        .search-bar {
+            
+            
+    padding: 5px;
+            flex-direction: row;
+        }
+    }
+      
+    .search-input {
+    font-size: 14px;
+    }
+
+h1 {
+    text-align: center;
+    font-weight: 900;
+    color:#ffce00;
+    font-size: 1.5rem;
+}
+
+.hotel-card {
+    display: flex;
+    gap: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+.price-button a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.hotel-card:hover {
+    transform: translateY(-5px);
+}
+
+.image-section {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.photo-button {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.photo-count {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.info-section {
+    flex: 1;
+}
+
+.info-section h3 {
+    margin: 0;
+}
+
+.stars {
+    color: gold;
+}
+
+.rating {
+    font-weight: bold;
+    color: #ffce00;
+}
+
+.price-section {
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffce00;
+}
+
+.price-button {
+    background-color: #ffce00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.price-button:hover {
+    background-color: #ffce00;
+}
+
+.search-bar {
+    margin-top: 15px; /* Supprime les marges inutiles */
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 5px 10px;
+    width: 600px; /* Ajustez la largeur si nécessaire */
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+@media screen and (max-width: 600px) {
+    .search-bar {
+        
+flex-direction: column; /* Empile les éléments verticalement */
+align-items: stretch; /* Les éléments remplissent la largeur */
+}
+
+#search-input {
+    width: 50%; /* Le champ prend toute la largeur */
+ }
+#search-button img {
+    max-width: 50px; /* Augmente légèrement la taille pour être lisible */
+}
+
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.search-bar button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.search-bar button img {
+width: 20px;
+height: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    
+    .hotel-card {
+            flex-direction: column; /* Change la disposition en colonne */
+        }
+       
+    .price-section {
+        
+    margin-top: 10px; /* Ajoute un espacement entre info et prix */
+            
+    text-align: left; /* Alignement du texte à gauche */
+        }
+    }
+    
+
+

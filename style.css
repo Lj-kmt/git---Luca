@@ -1,0 +1,590 @@
+:root {
+    --primary-color: #007cc3;
+    --secondary-color: #f5f5f5;
+    --accent-color: #f47c20;
+    --text-color: #333;
+    --font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family:'Poppins', sans-serif;;
+    color: var(--text-color);
+
+}
+
+.header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+/* Style de base */
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-right: 20px; /* Espace entre le logo et le menu */
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 10px;
+    position: relative;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.menu a i {
+    margin-right: 5px;
+}
+
+.border-menu {
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.dropdown a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown a:hover {
+    background-color: #f1f1f1;
+}
+
+.menu li:hover .dropdown {
+    display: block;
+}
+
+/* Style pour dropdown actif */
+.dropdown.active {
+    display: block;
+}
+
+/* Bouton Burger */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    margin-right: 20px; /* Espace entre le bouton et le menu */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        border-top: 1px solid #ccc;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu li {
+        width: 100%;
+    }
+
+    .menu a {
+        padding: 10px;
+        text-align: left;
+    }
+
+    .dropdown {
+        position: static;
+        box-shadow: none;
+        background-color: #f9f9f9;
+    }
+
+    .dropdown a {
+        padding: 8px 15px;
+    }
+}
+
+/* Responsive pour les très petits écrans */
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    .border-menu {
+        font-size: 14px;
+        padding: 5px;
+    }
+}
+
+
+
+/* Style de base pour mobile */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.search-section {
+    padding: 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+    margin-top: 50px;
+}
+
+.search-section h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.search-form input,
+.search-form button {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.search-form button {
+    background-color: #ffce00;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+    background-color: #ffce00;
+}
+
+/* Style pour écrans plus larges */
+@media (min-width: 768px) {
+    .search-form {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .search-form input {
+        width: auto;
+        max-width: 200px;
+    }
+
+    .search-form button {
+        width: auto;
+        max-width: 150px;
+    }
+}
+
+
+
+.offer-cards {
+    display: flex; /* Organisation en ligne */
+    gap: 20px; /* Espacement entre les cartes */
+    justify-content: center; /* Centrer les cartes horizontalement */
+    margin-top: 70px;
+    flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
+    z-index: 10; /* Toujours au-dessus d'autres éléments */
+}
+
+.offer-cards a {
+    text-decoration: none;
+    display: flex; /* Permet une mise en page des enfants de la carte */
+    flex-direction: column;
+    justify-content: flex-end; /* Place le texte en bas */
+    width: 200px; /* Largeur uniforme des cartes */
+    height: 200px; /* Hauteur uniforme des cartes */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #ffce00;
+    font-weight: bold;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.offer-cards a:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.offer-cards a div {
+    font-size: 1.2rem;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    z-index: 2;
+}
+h2 {
+    text-align: center;
+}
+
+.carousel-container {
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 15rem;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.carousel-images img {
+    width: calc(100% / 3);
+    flex-shrink: 0;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+.carousel-selectors {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.selector {
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.selector.active {
+    background-color: #333;
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        min-width: 50%; /* 2 images par slide */
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-item {
+        min-width: 100%; /* 1 image par slide */
+    }
+}
+
+/* General Reset */
+
+.hero {
+    background: url('/panorama-4539218_1280.jpg') no-repeat center center/cover;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.hero-content {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+    margin-top: 10rem;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.city-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.city {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #f4f4f4;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.city.active {
+    background-color: #ffce00;
+    color: white;
+    font-weight: bold;
+}
+
+.city:hover {
+    background-color: #ddd;
+}
+
+.price-list {
+    text-align: center;
+}
+
+.price-info {
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.months {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.month {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.month:hover {
+    background-color: #e6ffe6;
+    border-color: #ffce00;
+}
+
+.month p:last-child {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Footer styles */
+/* Footer styles */
+.footer {
+    background-color: #121212;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    padding: 30px;
+    text-align: left;
+    margin-top: 25rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    width: 100px;
+}
+
+.footer-country select {
+    background-color: #333;
+    color: #ffce00;
+    padding: 5px 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.footer-middle {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-links p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #fff;
+}
+
+.footer-newsletter {
+    max-width: 300px;
+}
+
+.footer-newsletter p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-newsletter form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-newsletter input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+    font-size: 14px;
+}
+
+.footer-newsletter button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffce00;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.footer-newsletter button:hover {
+    background-color: #ffce00;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-top: 1px solid #555;
+    padding-top: 20px;
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.footer-social a {
+    margin-right: 10px;
+    color: #bbb;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #fff;
+}

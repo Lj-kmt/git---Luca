@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'Inscription</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../pages css/style3.css">
+</head>
+<body>
+    <div class="signup-container">
+        <form class="signup-form" id="signupForm">
+            <h2>Inscription</h2>
+            <div class="form-group">
+                <label for="name">Nom Complet</label>
+                <input type="text" id="name" name="name" placeholder="Entrez votre nom complet" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Adresse Email</label>
+                <input type="email" id="email" name="email" placeholder="Entrez votre email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Numéro de Téléphone</label>
+                <input type="tel" id="phone" name="phone" placeholder="Entrez votre numéro de téléphone" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Mot de Passe</label>
+                <input type="password" id="password" name="password" placeholder="Entrez votre mot de passe" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirmer le Mot de Passe</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirmez votre mot de passe" required>
+            </div>
+            <button type="submit" class="btn">S'inscrire</button>
+            <p class="login-link">Déjà inscrit ? <a href="./connexion.html">Se connecter</a></p>
+        </form>
+    </div>
+    <script>
+        // Sélectionner le formulaire
+const signupForm = document.getElementById('signupForm');
+
+signupForm.addEventListener('submit', (e) => {
+    e.preventDefault(); // Empêche l'envoi par défaut
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const confirmPassword = document.getElementById('confirm-password').value.trim();
+
+    if (!name || !email || !phone || !password || !confirmPassword) {
+        alert("Veuillez remplir tous les champs !");
+        return;
+    }
+
+    if (!validateEmail(email)) {
+        alert("Veuillez entrer une adresse email valide !");
+        return;
+    }
+
+    if (password !== confirmPassword) {
+        alert("Les mots de passe ne correspondent pas !");
+        return;
+    }
+
+    // Si tout est valide
+    alert("Inscription réussie !");
+});
+
+// Fonction de validation d'email
+function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+}
+
+    </script>
+</body>
+</html>
